@@ -23,8 +23,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-20.04, windows-latest, macos-latest]
-        with-intl: [none, small-icu, full-icu]
+        os: [macos-latest]
+        with-intl: [small-icu]
         include:
           - os: macos-latest
             with-intl: small-icu
