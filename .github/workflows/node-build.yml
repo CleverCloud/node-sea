@@ -26,57 +26,10 @@ jobs:
         os: [ubuntu-20.04, windows-latest, macos-latest]
         with-intl: [none, small-icu, full-icu]
         include:
-          # linux
-          - os: ubuntu-20.04
-            with-intl: none
-            platform: linux
-            arch: x64
-          # - os: ubuntu-20.04
-          #   with-intl: system-icu
-          #   platform: linux
-          #   arch: x64
-          - os: ubuntu-20.04
-            with-intl: small-icu
-            platform: linux
-            arch: x64
-          - os: ubuntu-20.04
-            with-intl: full-icu
-            platform: linux
-            arch: x64
-          # macos
-          - os: macos-latest
-            with-intl: none
-            platform: macos
-            arch: x64
-          # - os: macos-latest
-          #   with-intl: system-icu
-          #   platform: macos
-          #   arch: x64
           - os: macos-latest
             with-intl: small-icu
             platform: macos
-            arch: x64
-          - os: macos-latest
-            with-intl: full-icu
-            platform: macos
-            arch: x64
-          # windows
-          - os: windows-latest
-            with-intl: none
-            platform: windows
-            arch: x64
-          # - os: windows-latest
-          #   with-intl: system-icu
-          #   platform: windows
-          #   arch: x64
-          - os: windows-latest
-            with-intl: small-icu
-            platform: windows
-            arch: x64
-          - os: windows-latest
-            with-intl: full-icu
-            platform: windows
-            arch: x64
+            arch: arm64
 
     steps:
     - uses: actions/checkout@v3
@@ -174,5 +127,4 @@ jobs:
         files: node-*
         tag_name: node
         release_name: node
-        
-        
+
